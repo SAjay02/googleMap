@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css"> 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEJKPO1AYMjoiEa7T746tRVtxzf5KhZF8&callback=initMap" async defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <h3 class="text-center mt-5" style="color: dimgray;">Garbage Locations</h3>
+    <div id="map" class="container mt-3 w-75 h-100" style="border: 3px solid grey;"></div>
+    <script src="index.js"></script>
+    <!-- <script>
+        // Define a function to initialize the map
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 0, lng: 0 }, // Center the map at a default location
+                zoom: 12 // Set an initial zoom level
+            });
+            // Fetch data from your PHP script
+            fetch('index.php')
+                .then(response => response.json())
+                .then(data => {
+                    alert(data);
+                    // Process your data and display it on the map
+                    data.forEach(item => {
+                        var marker = new google.maps.Marker({
+                            position: { lat: parseFloat(item.Lati), lng: parseFloat(item.Lngi) }, // Use your data's latitude and longitude
+                            map,
+                            title: item.Capacity // Use your data's title or other properties
+                        });
+                    });
+                })
+                
+        }
+        //window.initMap=initMap;
+    </script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script> 
+   </body>
+</html>
